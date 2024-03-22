@@ -1,5 +1,6 @@
-import noteRepository from '../repository/noteRepository';
+import noteRepository from '../repository/NoteRepository';
 import {ResponseModel} from '../utility/ResponseModel'
+import logger from '../utility/Logger'
 
 /**
  * Gets all the notes
@@ -12,9 +13,10 @@ const getAllNotes = async (request, response)=> {
         const result = await noteRepository.fetchAllNotes()
         responseModel.isSuccess=true
         responseModel.responseData=result
-        responseModel.message="Total notes: "
+        responseModel.message="All notes fetched."
     } catch (error) {
-        responseModel.responseData=error.
+        logger.error(error)
+        responseModel.responseData=error
         responseModel.message="Unable to fetch all notes."
     }
 
@@ -32,7 +34,9 @@ const getNoteById = async (request, response)=> {
         const result = await noteRepository.fetchNoteById(request.params.id)
         responseModel.isSuccess=true
         responseModel.responseData=result    
+        responseModel.message="Note fetched successfully."
     } catch (error) {
+        logger.error(error)
         responseModel.responseData=error
         responseModel.message="Unable to fetch note by id."
     }
@@ -57,6 +61,7 @@ const updateNote=async (request,response)=>{
             responseModel.isSuccess=true
         }    
     }catch(error){
+        logger.error(error)
         responseModel.responseData=error
         responseModel.message="Unable to update the note."
     }
@@ -80,6 +85,7 @@ const deleteNote=async (request,response)=>{
         }
    
     }catch(error){
+        logger.error(error)
         responseModel.responseData=error
         responseModel.message="Unable to delete note."
     }
@@ -104,6 +110,7 @@ const createNote= async (request,response)=>{
         }
     
     }catch(error){
+        logger.error(error)
         responseModel.responseData=error
         responseModel.message="Unable to create note."
     }
