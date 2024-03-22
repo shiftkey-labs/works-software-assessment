@@ -103,7 +103,7 @@ const createNote= async (request,response)=>{
         const result=await noteRepository.createNote(request.body)
         if(result['insertId']>0){        
             responseModel.responseData=await noteRepository.fetchNoteById(result['insertId'])
-            responseModel.message="Total notes: " 
+            responseModel.message="Note created successfully." 
             responseModel.isSuccess=true
         }else{
             throw "Note not created."
