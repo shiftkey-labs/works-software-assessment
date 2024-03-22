@@ -1,0 +1,93 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "API Collection",
+    "dateExported": "2024-03-22T00:56:33.564Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "05fcff84-63c1-45d2-a91c-7ebe37d0aaab",
+            "colId": "fe4e325f-afb4-4a05-8a2f-295310ea07a0",
+            "containerId": "",
+            "name": "Get note by id",
+            "url": "http://localhost:3000/note/21",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-03-22T00:55:20.091Z",
+            "modified": "2024-03-22T00:55:20.091Z",
+            "headers": [],
+            "params": [],
+            "reqType": "get",
+            "tests": []
+        },
+        {
+            "_id": "d7b1158f-442b-4e47-9a39-7ee8d442956d",
+            "colId": "fe4e325f-afb4-4a05-8a2f-295310ea07a0",
+            "containerId": "",
+            "name": "Delete note",
+            "url": "localhost:3000/note/delete/17",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-03-22T00:55:30.740Z",
+            "modified": "2024-03-22T00:55:30.740Z",
+            "headers": [],
+            "params": [],
+            "reqType": "del",
+            "tests": []
+        },
+        {
+            "_id": "20d543db-b298-4c8b-b483-7ed2e24becb6",
+            "colId": "fe4e325f-afb4-4a05-8a2f-295310ea07a0",
+            "containerId": "",
+            "name": "Create note",
+            "url": "localhost:3000/note/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-22T00:55:37.421Z",
+            "modified": "2024-03-22T00:55:37.421Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\":\"title 3 update \",\n  \"note_text\":\"note text it is updated\"\n}",
+                "form": []
+            },
+            "reqType": "post",
+            "tests": []
+        },
+        {
+            "_id": "f4b7c510-613f-44b8-b693-ac85c270a028",
+            "colId": "fe4e325f-afb4-4a05-8a2f-295310ea07a0",
+            "containerId": "",
+            "name": "Update note",
+            "url": "localhost:3000/note/update",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-03-22T00:55:43.421Z",
+            "modified": "2024-03-22T00:56:25.245Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":8,\n  \"title\":\"title 1 update 4\",\n  \"note_text\":\"note text it is updated\"\n}",
+                "form": []
+            },
+            "reqType": "patch",
+            "tests": []
+        },
+        {
+            "_id": "dd4e096a-b2c4-485e-836a-a9a54e40c6a0",
+            "colId": "fe4e325f-afb4-4a05-8a2f-295310ea07a0",
+            "containerId": "",
+            "name": "Get all notes",
+            "url": "http://localhost:3000/note",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-03-22T00:55:54.292Z",
+            "modified": "2024-03-22T00:55:54.292Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
