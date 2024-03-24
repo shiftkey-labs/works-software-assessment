@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  note-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo  # Depend on the MongoDB service
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"  # Expose port 27017 for MongoDB
+    volumes:
+      - mongo-data:/data/db  # Mount a volume for MongoDB data persistence
+
+volumes:
+  mongo-data:  # Volume for MongoDB data persistence
